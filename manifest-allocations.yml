@@ -1,13 +1,13 @@
 applications:
-- name: tracker-allocations2
+- name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: allocations-pal-kiran-k.apps.dev.pcf-aws.com
+  - route: allocations-pal-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
   memory: 1G
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-allocations-database2
-  - tracker-eureka-server2
-  - tracker-circuit-breaker-dashboard2
+  - tracker-allocations-database
+  - tracker-service-registry
+  - tracker-circuit-breaker-dashboard
