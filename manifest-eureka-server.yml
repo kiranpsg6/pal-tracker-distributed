@@ -1,0 +1,9 @@
+applications:
+- name: tracker-eureka-server2
+  path: ./platform-services/eureka-server/build/libs/eureka-server.jar
+  routes:
+  - route: eureka-server-pal-kiran-k.apps.dev.pcf-aws.com
+  memory: 1G
+  instances: 1
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 11.+ } }"
