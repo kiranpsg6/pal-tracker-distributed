@@ -10,3 +10,4 @@ applications:
   services:
   - tracker-timesheets-database2
   - tracker-eureka-server2
+  - tracker-circuit-breaker-dashboard2
