@@ -9,15 +9,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 
 
-
 @Configuration
 public class RestConfig {
-
-    @Bean
-    @LoadBalanced
-    public RestOperations restOperations() {
-        return new RestTemplate();
-    }
 
     @Bean
     public ObjectMapper objectMapper() {

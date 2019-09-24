@@ -2,11 +2,12 @@ applications:
 - name: tracker-registration2
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
-  - route: registration-pal-kiran-k.apps.dev.pcf-aws.com
+  - route: registration-pal-kiran-d.apps.dev.pcf-aws.com
   memory: 1G
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
-  - tracker-registration-database2
-  - tracker-eureka-server2
+  - tracker-registration-database
+  - tracker-eureka-server
+  - tracker-sso
